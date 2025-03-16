@@ -1,6 +1,5 @@
 export * from './projects'
 export * from './friends'
-export * from './changelog'
 export * from './education'
 export * from './career'
 export * from './activity'

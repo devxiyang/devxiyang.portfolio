@@ -29,10 +29,10 @@ export const footerItems: Array<NavItemType> = [
     name: 'Friends',
     href: '/friends'
   },
-  {
-    name: 'Changelog',
-    href: '/changelog'
-  }
+  // {
+  //   name: 'Changelog',
+  //   href: '/changelog'
+  // }
 ]
 
 export const navItems: Array<NavItemType> = [
@@ -41,15 +41,15 @@ export const navItems: Array<NavItemType> = [
     href: '/'
   },
   {
-    name: 'About',
-    href: '/about'
+    name: 'Blogs',
+    href: '/blogs'
   },
   {
     name: 'Projects',
     href: '/projects'
   },
   {
-    name: 'Blogs',
-    href: '/blogs'
-  }
+    name: 'About',
+    href: '/about'
+  },
 ]

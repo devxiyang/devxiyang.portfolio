@@ -1,5 +1,5 @@
 // friends
-export const friendsHeadLine = "Corey' friends"
+export const friendsHeadLine = "devxiyang's friends"
 export const friendsIntro = "Meet some interesting friends."
 
 
@@ -12,8 +12,8 @@ export type FriendItemType = {
 }
 
 export const friends: Array<FriendItemType> = [
-  {
-    name: 'devxiyang',
-    link: { href: 'https://devxiyang.com' },
-  },
+  // {
+  //   name: 'devxiyang',
+  //   link: { href: 'https://devxiyang.com' },
+  // },
 ]

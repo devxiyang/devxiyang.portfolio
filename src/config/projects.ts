@@ -98,14 +98,6 @@ export type ProjectItemType = {
       gitForks: 67
     },
     {
-      name: 'Corey Chiu Portfolio Template',
-      description:
-        'portfolio template by corey chiu',
-      link: { href: 'github.com/iAmCorey/coreychiu-portfolio-template', label: 'Corey Chiu Portfolio Template' },
-      gitStars: 229,
-      gitForks: 30
-    },
-    {
       name: 'Chrome Extension Plasmo Template',
       description:
         'A chrome extension template using plasmo, tailwind css, shadcn/ui',

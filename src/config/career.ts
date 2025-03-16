@@ -14,7 +14,7 @@ export type CareerItemType = {
   export const careerList: Array<CareerItemType> = [
     {
       company: 'Mihoyo',
-      title: 'Software Engineer',
+      title: 'AI Software Engineer',
       logo: 'bank',
       start: '2022',
       end: 'Present'

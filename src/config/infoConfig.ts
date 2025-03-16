@@ -8,7 +8,7 @@ export * from './activity'
 // personal info
 export const name = 'devxiyang'
 export const headline = 'Software engineer, Full-Stack web developer, and indie hacker.'
-export const introduction = 'I’m devxiyang, a software engineer based in Shanghai, China. I like coding, and building interesting things'
+export const introduction = 'I’m devxiyang, ai software engineer based in Shanghai, China. I like coding, and building interesting things.'
 export const email = 'devxiyang@gmail.com'
 export const githubUsername = 'devxiyang'
 
@@ -22,7 +22,7 @@ export const aboutParagraphs = [
 
 
 // blog
-export const blogHeadLine = "What I've thinking about."
+export const blogHeadLine = "Thinking recently."
 export const blogIntro = "I've written something about AI, programming and life."
 
 

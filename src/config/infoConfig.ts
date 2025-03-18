@@ -8,9 +8,10 @@ export * from './activity'
 // personal info
 export const name = 'devxiyang'
 export const headline = 'Software engineer, Full-Stack web developer, and indie hacker.'
-export const introduction = 'I’m devxiyang, ai software engineer based in Shanghai, China. I like coding, and building interesting things.'
+export const introduction = "I'm devxiyang, ai software engineer based in Shanghai, China. I like coding, and building interesting things."
 export const email = 'devxiyang@gmail.com'
 export const githubUsername = 'devxiyang'
+export const avatarUrl = '/images/avatar.jpg' // 头像URL，用于SEO和OpenGraph
 
 // about page
 export const aboutMeHeadline = "I'm devxiyang, a software engineer based in Shanghai, China."

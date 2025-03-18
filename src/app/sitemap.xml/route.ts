@@ -1,11 +1,9 @@
 import { allBlogs } from 'contentlayer/generated'
 
-export async function GET() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+export const dynamic = 'force-static';
 
-  if (!siteUrl) {
-    throw Error('Missing NEXT_PUBLIC_SITE_URL environment variable')
-  }
+export async function GET() {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://devxiyang.com';
 
   // Define the static pages of your website
   const staticPages = [
@@ -61,7 +59,7 @@ export async function GET() {
     </urlset>
   `
 
-  return new Response(sitemap, {
+  return new Response(sitemap.trim(), {
     status: 200,
     headers: {
       'Content-Type': 'application/xml',

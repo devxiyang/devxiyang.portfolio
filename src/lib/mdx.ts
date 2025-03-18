@@ -1,4 +1,4 @@
-import { useMDXComponent as useNextMDXComponent } from 'next-contentlayer/hooks'
+import { useMDXComponent as useNextMDXComponent } from 'next-contentlayer2/hooks'
 import { mdxComponents } from '@/components/shared/MdxComponents'
 import React from 'react'
 

@@ -57,8 +57,6 @@ export function BlogLayout({
               >
                 <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
                 <span className="ml-3">{formatDate(blog.date)}</span>
-                <span className="mx-2">·</span>
-                <span>{blog.author}</span>
               </time>
             </header>
             <Prose className="mt-8" data-mdx-content>

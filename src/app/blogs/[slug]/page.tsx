@@ -34,14 +34,14 @@ export default async function BlogPage({ params }: Props) {
     notFound()
   }
 
-  const content = await getMDXContent(params.slug)
+  const MDXContent = getMDXContent(blog.body.code)
 
   return (
     <BlogLayout
         blog={blog}
     >
       <div className="mt-8 prose dark:prose-invert">
-        {content}
+        <MDXContent />
       </div>
     </BlogLayout>
   )

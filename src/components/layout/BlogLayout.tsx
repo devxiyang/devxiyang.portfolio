@@ -8,26 +8,18 @@ import { Container } from '@/components/layout/Container'
 import { Prose } from '@/components/shared/Prose'
 import { type BlogType } from '@/lib/blogs'
 import { formatDate } from '@/lib/formatDate'
-
-function ArrowLeftIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
-      <path
-        d="M7.25 11.25 3.75 8m0 0 3.5-3.25M3.75 8h8.5"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
+import { ArrowLeftIcon } from '@/components/shared/Icons'
 
 export function BlogLayout({
   blog,
   children,
+  prevBlog,
+  nextBlog,
 }: {
   blog: BlogType
   children: React.ReactNode
+  prevBlog?: BlogType | null
+  nextBlog?: BlogType | null
 }) {
   let router = useRouter()
   let { previousPathname } = useContext(AppContext)
@@ -57,8 +49,6 @@ export function BlogLayout({
               >
                 <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
                 <span className="ml-3">{formatDate(blog.date)}</span>
-                <span className="mx-2">·</span>
-                <span>{blog.author}</span>
               </time>
             </header>
             <Prose className="mt-8" data-mdx-content>

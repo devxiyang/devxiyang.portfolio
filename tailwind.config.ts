@@ -25,6 +25,9 @@ export default {
   	},
   	typography: 'typographyStyles',
   	extend: {
+      fontFamily: {
+        sans: ['var(--font-inter)', 'sans-serif'],
+      },
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',

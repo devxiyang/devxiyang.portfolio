@@ -6,6 +6,7 @@ export type BlogType = {
   date: string
   slug: string
   url: string
+  language?: string
 }
 
 export async function getAllBlogs() {

@@ -15,7 +15,7 @@ async function importBlog(
   blogFilename: string,
 ): Promise<BlogType> {
   const source = await fs.readFile(
-    path.join(process.cwd(), 'src/content/blog', blogFilename),
+    path.join(process.cwd(), 'content/blog', blogFilename),
     'utf-8'
   )
   
@@ -30,7 +30,7 @@ async function importBlog(
 
 export async function getAllBlogs() {
   let blogFileNames = await glob('*.mdx', {
-    cwd: './src/content/blog',
+    cwd: './content/blog',
   })
 
   let blogs = await Promise.all(blogFileNames.map(importBlog))

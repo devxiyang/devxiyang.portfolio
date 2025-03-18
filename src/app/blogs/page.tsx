@@ -7,6 +7,7 @@ import { formatDate } from '@/lib/formatDate'
 import { blogHeadLine, blogIntro, name } from '@/config/infoConfig'
 import { Blog as BlogType } from 'contentlayer/generated'
 import { generateHomeSchema } from '@/lib/generate-schema'
+import { LanguageTag } from '@/components/shared/LanguageTag'
 
 export const runtime = process.env.NEXT_RUNTIME === 'edge' ? 'edge' : 'nodejs'
 
@@ -18,7 +19,10 @@ function Blog({ blog }: { blog: BlogType }) {
     <article className="md:grid md:grid-cols-4 md:items-baseline">
       <Card className="md:col-span-3">
         <Card.Title href={`/blogs/${blog.slug}`}>
-          {blog.title}
+          <span className="inline-flex items-center">
+            {blog.title}
+            <LanguageTag language={blog.language} />
+          </span>
         </Card.Title>
         <Card.Eyebrow
           as="time"

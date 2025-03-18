@@ -10,23 +10,6 @@ import { type BlogType } from '@/lib/blogs'
 import { formatDate } from '@/lib/formatDate'
 import { ArrowLeftIcon } from '@/components/shared/Icons'
 
-// 语言标签组件
-function LanguageTag({ language }: { language?: string }) {
-  const isEnglish = language === 'en'
-  return (
-    <span className={`
-      inline-flex items-center justify-center 
-      rounded-full px-2.5 py-0.5 text-xs font-medium 
-      ${isEnglish 
-        ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400' 
-        : 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400'}
-      mr-3 relative -top-1
-    `}>
-      {isEnglish ? '英' : '中'}
-    </span>
-  )
-}
-
 export function BlogLayout({
   blog,
   children,
@@ -58,10 +41,7 @@ export function BlogLayout({
           <article>
             <header className="flex flex-col">
               <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100 break-words">
-                <div className="inline">
-                  <LanguageTag language={blog.language} />
-                  <span>{blog.title}</span>
-                </div>
+                {blog.title}
               </h1>
               <time
                 dateTime={blog.date}

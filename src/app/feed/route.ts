@@ -1,3 +1,5 @@
+// 注意：在 Next.js 静态导出模式下 (output: 'export')，此路由处理程序不会被执行。
+// 请参考 scripts/generate-rss.js，该脚本在构建过程中生成静态 feed.xml 文件。
 import { Feed } from 'feed'
 import { name, email } from '@/config/infoConfig'
 import { allBlogs } from 'contentlayer/generated'

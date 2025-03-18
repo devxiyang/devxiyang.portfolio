@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils'
 
 export default function Feed() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
-  const feedUrl = `${siteUrl}/feed`
+  const feedUrl = `${siteUrl}/feed.xml`
   const [copied, setCopied] = useState(false)
 
   const handleCopy = async () => {

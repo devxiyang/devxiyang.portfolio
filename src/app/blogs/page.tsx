@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteUrl}/blogs`,
     types: {
-      'application/rss+xml': `${siteUrl}/feed`,
+      'application/rss+xml': `${siteUrl}/feed.xml`,
       'application/ld+json': JSON.stringify(
         generateHomeSchema(siteUrl)
       ),

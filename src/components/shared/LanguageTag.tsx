@@ -1,5 +1,6 @@
 export function LanguageTag({ language }: { language?: string }) {
-  const isEnglish = language === 'en'
+  const isEnglish = language === 'en';
+  
   return (
     <span className={`
       inline-flex items-center justify-center 
@@ -9,7 +10,7 @@ export function LanguageTag({ language }: { language?: string }) {
         : 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400'}
       ml-2
     `}>
-      {isEnglish ? '英' : '中'}
+      {isEnglish ? 'En' : 'Zh'}
     </span>
   )
 } 

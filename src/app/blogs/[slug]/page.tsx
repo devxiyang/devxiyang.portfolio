@@ -1,11 +1,12 @@
 import { type Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
-import { getBlogBySlug, getAllBlogs } from '@/lib/blogs'
+import { getBlogBySlug, getAllBlogs, getAdjacentBlogs } from '@/lib/blogs'
 import { getMDXContent } from '@/lib/mdx'
 import { BlogLayout } from '@/components/layout/BlogLayout'
 import { generateBlogSchema } from '@/lib/generate-schema'
 import { name } from '@/config/infoConfig'
+import { BlogNavigation } from '@/components/shared/BlogNavigation'
 
 export const runtime = process.env.NEXT_RUNTIME === 'edge' ? 'edge' : 'nodejs'
 
@@ -72,15 +73,19 @@ export default async function BlogPage({ params }: Props) {
     notFound()
   }
 
+  const { prevBlog, nextBlog } = await getAdjacentBlogs(params.slug)
   const MDXContent = getMDXContent(blog.body.code)
 
   return (
     <BlogLayout
-        blog={blog}
+      blog={blog}
+      prevBlog={prevBlog}
+      nextBlog={nextBlog}
     >
       <div className="mt-8 prose dark:prose-invert">
         <MDXContent />
       </div>
+      <BlogNavigation prevBlog={prevBlog} nextBlog={nextBlog} />
     </BlogLayout>
   )
 }

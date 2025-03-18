@@ -41,14 +41,13 @@ export const Blog = defineDocumentType(() => ({
     language: {
       type: 'string',
       resolve: (post) => {
-        const path = post._raw.flattenedPath
-        if (path.includes('/en/') || path.startsWith('en-')) {
-          return 'en'
-        } else if (path.includes('/zh/') || path.startsWith('zh-')) {
-          return 'zh'
-        } else {
-          return 'en' // Default language
+        const path = post._raw.sourceFilePath;
+        // 如果文件在 blog/en 目录下，则为英文
+        if (path.includes('blog/en/')) {
+          return 'en';
         }
+        // 否则默认为中文
+        return 'zh';
       }
     }
   },

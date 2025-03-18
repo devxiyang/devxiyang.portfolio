@@ -29,9 +29,16 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   // 忽略构建时的类型检查错误
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  // typescript: {
+  //   ignoreBuildErrors: true,
+  // },
+  webpack: (config) => {
+    // 减少这类动态导入警告
+    config.infrastructureLogging = {
+      level: 'error' // 只显示错误，不显示警告
+    };
+    return config;
+  }
 }
 
 export default withContentlayer(nextConfig)
